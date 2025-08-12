@@ -1,0 +1,18 @@
+---
+id: 0
+name: Testnet deployment
+network: testnet
+stacks-node: "https://api.testnet.hiro.so"
+bitcoin-node: "http://blockstack:blockstacksystem@bitcoind.testnet.stacks.co:18332"
+plan:
+  batches:
+    - id: 0
+      transactions:
+        - contract-publish:
+            contract-name: project-workout-tracker
+            expected-sender: STF7SWVQS6CH4Q0BYQKP2NPQ7KF137G5TM3SSQK6
+            cost: 27800
+            path: "contracts\\project-workout-tracker.clar"
+            anchor-block-only: true
+            clarity-version: 3
+      epoch: "3.2"
